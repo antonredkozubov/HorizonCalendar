@@ -27,16 +27,19 @@ public final class DayOfWeekView: UIView {
 
     backgroundLayer = CAShapeLayer()
     let backgroundShapeDrawingConfig = invariantViewProperties.backgroundShapeDrawingConfig
-    backgroundLayer.backgroundColor = UIColor.clear.cgColor
-    // backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+    // backgroundLayer.backgroundColor = UIColor.clear.cgColor
     backgroundLayer.strokeColor = backgroundShapeDrawingConfig.borderColor.cgColor
     backgroundLayer.lineWidth = backgroundShapeDrawingConfig.borderWidth
 
     if monthsLayout ?? .horizontal == .horizontal { 
       backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
+      backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
+      self.backgroundColor = UIColor.globalFirstLayerViewColor
     }
     else { 
-        backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+      backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+      backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+      self.backgroundColor = UIColor.globalBackgroundColor
     }
 
     label = UILabel()
@@ -49,7 +52,7 @@ public final class DayOfWeekView: UIView {
 
     isUserInteractionEnabled = false
 
-    backgroundColor = UIColor.clear
+    
 
     layer.addSublayer(backgroundLayer)
     // layer.backgroundColor = UIColor.clear
