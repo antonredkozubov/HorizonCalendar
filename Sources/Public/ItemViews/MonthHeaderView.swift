@@ -32,6 +32,10 @@ public final class MonthHeaderView: UIView {
 
     super.init(frame: .zero)
 
+    if monthsLayout ?? .horizontal == .horizontal { 
+      label.isHidden = true
+    }
+
     isUserInteractionEnabled = false
 
     backgroundColor = invariantViewProperties.backgroundColor
@@ -64,7 +68,7 @@ public final class MonthHeaderView: UIView {
 
   private let invariantViewProperties: InvariantViewProperties
   private let label: UILabel
-
+  private var monthsLayout: MonthsLayout?
 }
 
 // MARK: Accessibility
@@ -96,15 +100,17 @@ extension MonthHeaderView {
 
     // MARK: Lifecycle
 
-    public init(monthText: String, accessibilityLabel: String?) {
+    public init(monthText: String, accessibilityLabel: String?, monthsLayout: MonthsLayout) {
       self.monthText = monthText
       self.accessibilityLabel = accessibilityLabel
+      self.monthsLayout = monthsLayout
     }
 
     // MARK: Public
 
     public let monthText: String
     public let accessibilityLabel: String?
+    public let monthsLayout: MonthsLayout
   }
 
 }
