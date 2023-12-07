@@ -438,7 +438,7 @@ public final class CalendarViewContent {
       let dayOfWeekText = self?.symbolsFor("cccccc")[weekdayIndex]
       let itemModel = DayOfWeekView.calendarItemModel(
         invariantViewProperties: .base,
-        content: .init(dayOfWeekText: dayOfWeekText ?? "", accessibilityLabel: dayOfWeekText))
+        content: .init(dayOfWeekText: dayOfWeekText ?? "", accessibilityLabel: dayOfWeekText, monthsLayout: self.monthsLayout))
       return itemModel
     }
 
