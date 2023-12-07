@@ -32,7 +32,7 @@ public final class DayOfWeekView: UIView {
     backgroundLayer.strokeColor = backgroundShapeDrawingConfig.borderColor.cgColor
     backgroundLayer.lineWidth = backgroundShapeDrawingConfig.borderWidth
 
-    if monthsLayout = .horizontal { 
+    if monthsLayout == .horizontal { 
       backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
     }
     else { 
@@ -150,7 +150,7 @@ extension DayOfWeekView {
 
     public let dayOfWeekText: String
     public let accessibilityLabel: String?
-    private let monthsLayout: MonthsLayout
+    public let monthsLayout: MonthsLayout
   }
 
 }
