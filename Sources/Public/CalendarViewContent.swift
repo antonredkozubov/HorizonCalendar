@@ -427,7 +427,7 @@ public final class CalendarViewContent {
     let monthText = monthHeaderDateFormatter.string(from: firstDateInMonth)
     let itemModel = MonthHeaderView.calendarItemModel(
       invariantViewProperties: .base,
-      content: .init(monthText: monthText, accessibilityLabel: monthText))
+      content: .init(monthText: monthText, accessibilityLabel: monthText, monthsLayout: self?.monthsLayout ?? .horizontal))
     return itemModel
   }
 
