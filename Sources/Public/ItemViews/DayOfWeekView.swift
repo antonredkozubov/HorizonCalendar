@@ -100,6 +100,7 @@ public final class DayOfWeekView: UIView {
 
   fileprivate func setContent(_ content: Content) {
     label.text = content.dayOfWeekText
+    monthsLayout = content.monthsLayout
     accessibilityLabel = content.accessibilityLabel
   }
 
@@ -149,6 +150,7 @@ extension DayOfWeekView {
 
     public let dayOfWeekText: String
     public let accessibilityLabel: String?
+    private let monthsLayout: MonthsLayout
   }
 
 }
