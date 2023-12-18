@@ -32,8 +32,15 @@ public final class MonthHeaderView: UIView {
 
     super.init(frame: .zero)
 
-    if monthsLayout ?? .horizontal == .horizontal { 
+    // if monthsLayout ?? .horizontal == .horizontal { 
+    //   label.isHidden = true
+    // }
+
+    if monthsLayout ?? .vertical == .vertical { 
       label.isHidden = true
+    }
+    else if monthsLayout == .horizontal { 
+      label.isHidden = false
     }
 
     isUserInteractionEnabled = false
