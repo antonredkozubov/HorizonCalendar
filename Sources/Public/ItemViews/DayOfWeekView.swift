@@ -30,9 +30,9 @@ public final class DayOfWeekView: UIView {
     // backgroundLayer.backgroundColor = UIColor.clear.cgColor
     backgroundLayer.strokeColor = backgroundShapeDrawingConfig.borderColor.cgColor
     backgroundLayer.lineWidth = backgroundShapeDrawingConfig.borderWidth
-    backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
-    backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
-   // self.backgroundColor = UIColor.globalFirstLayerViewColor
+    backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+    backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+    self.backgroundColor = UIColor.globalBackgroundColor
 
     // if monthsLayout ?? .horizontal == .horizontal { 
     //   backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
@@ -54,16 +54,16 @@ public final class DayOfWeekView: UIView {
     super.init(frame: .zero)
 
     isUserInteractionEnabled = false
-if monthsLayout ?? .horizontal == .horizontal { 
-      backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
-      backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
-      self.backgroundColor = UIColor.globalFirstLayerViewColor
-    }
-    else { 
-      backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
-      backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
-      self.backgroundColor = UIColor.globalBackgroundColor
-    }
+// if monthsLayout ?? .horizontal == .horizontal { 
+//       backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
+//       backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
+//       self.backgroundColor = UIColor.globalFirstLayerViewColor
+//     }
+//     else { 
+//       backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+//       backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+//       self.backgroundColor = UIColor.globalBackgroundColor
+//     }
     
 
     layer.addSublayer(backgroundLayer)
