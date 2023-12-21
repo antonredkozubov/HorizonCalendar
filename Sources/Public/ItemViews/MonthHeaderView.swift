@@ -36,12 +36,12 @@ public final class MonthHeaderView: UIView {
     //   label.isHidden = true
     // }
 
-    if monthsLayout ?? .vertical == .vertical { 
-      label.isHidden = true
-    }
-    else if monthsLayout == .horizontal { 
-      label.isHidden = false
-    }
+    // if monthsLayout ?? .vertical == .vertical { 
+    //   label.isHidden = true
+    // }
+    // else if monthsLayout == .horizontal { 
+    //   label.isHidden = false
+    // }
 
     isUserInteractionEnabled = false
 
