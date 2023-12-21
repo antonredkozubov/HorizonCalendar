@@ -30,6 +30,9 @@ public final class DayOfWeekView: UIView {
     // backgroundLayer.backgroundColor = UIColor.clear.cgColor
     backgroundLayer.strokeColor = backgroundShapeDrawingConfig.borderColor.cgColor
     backgroundLayer.lineWidth = backgroundShapeDrawingConfig.borderWidth
+    backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+    backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+   // self.backgroundColor = UIColor.globalFirstLayerViewColor
 
     // if monthsLayout ?? .horizontal == .horizontal { 
     //   backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
