@@ -34,16 +34,16 @@ public final class DayOfWeekView: UIView {
     backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
     
 
-    if monthsLayout ?? .horizontal == .horizontal { 
-      backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
-      backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
-      self.backgroundColor = UIColor.globalFirstLayerViewColor
-    }
-    else { 
-      backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
-      backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
-      self.backgroundColor = UIColor.globalBackgroundColor
-    }
+    // if monthsLayout ?? .horizontal == .horizontal { 
+    //   backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
+    //   backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
+    //   self.backgroundColor = UIColor.globalFirstLayerViewColor
+    // }
+    // else { 
+    //   backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+    //   backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+    //   self.backgroundColor = UIColor.globalBackgroundColor
+    // }
 
     label = UILabel()
     label.font = invariantViewProperties.font
