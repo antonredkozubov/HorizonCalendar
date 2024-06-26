@@ -48,7 +48,7 @@ if monthsLayout ?? .horizontal == .horizontal {
       backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
       self.backgroundColor = UIColor.globalFirstLayerViewColor
     }
-    else if monthsLayout ?? .vertical == .vertical { 
+    else { 
       backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
       backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
       self.backgroundColor = UIColor.globalBackgroundColor
