@@ -147,6 +147,10 @@ extension DayOfWeekView {
       self.monthsLayout = monthsLayout
     }
 
+    public init(monthsLayout: MonthsLayout) {
+      self.monthsLayout = monthsLayout
+    }
+
     // MARK: Public
 
     public let dayOfWeekText: String
