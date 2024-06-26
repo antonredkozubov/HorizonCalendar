@@ -30,11 +30,17 @@ public final class MonthHeaderView: UIView {
     label.textAlignment = invariantViewProperties.textAlignment
     label.textColor = invariantViewProperties.textColor
 
-    super.init(frame: .zero)
+    if monthsLayout ?? .horizontal == .horizontal { 
+      label.isHidden = true
+    }
+     if monthsLayout ?? .vertical == .vertical { 
+      label.isHidden = false
+    }
+    else if monthsLayout == .horizontal { 
+      label.isHidden = true
+    }
 
-    // if monthsLayout ?? .horizontal == .horizontal { 
-    //   label.isHidden = true
-    // }
+    super.init(frame: .zero)
 
     if monthsLayout ?? .vertical == .vertical { 
       label.isHidden = false
