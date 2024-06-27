@@ -39,12 +39,12 @@ public final class MonthHeaderView: UIView {
 
     super.init(frame: .zero)
 
-    if monthsLayout == .vertical { 
-      label.isHidden = false
-    }
-    else if monthsLayout == .horizontal { 
-      label.isHidden = true
-    }
+    // if monthsLayout == .vertical { 
+    //   label.isHidden = false
+    // }
+    // else if monthsLayout == .horizontal { 
+    //   label.isHidden = true
+    // }
 
     isUserInteractionEnabled = false
 
@@ -72,7 +72,13 @@ public final class MonthHeaderView: UIView {
   fileprivate func setContent(_ content: Content) {
     label.text = content.monthText
     accessibilityLabel = content.accessibilityLabel
-    self.monthsLayout = content.monthsLayout
+    monthsLayout = content.monthsLayout
+    if content.monthsLayout == .vertical { 
+      label.isHidden = false
+    }
+    else if content.monthsLayout == .horizontal { 
+      label.isHidden = true
+    }
   }
 
   // MARK: Private
