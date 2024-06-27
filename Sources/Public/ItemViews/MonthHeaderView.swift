@@ -30,24 +30,21 @@ public final class MonthHeaderView: UIView {
     label.textAlignment = invariantViewProperties.textAlignment
     label.textColor = invariantViewProperties.textColor
 
-    if monthsLayout ?? .horizontal == .horizontal { 
+    if monthsLayout == .horizontal { 
       label.isHidden = true
     }
-     if monthsLayout ?? .vertical == .vertical { 
+    else if monthsLayout == .vertical { 
       label.isHidden = false
-    }
-    else if monthsLayout == .horizontal { 
-      label.isHidden = true
     }
 
     super.init(frame: .zero)
 
-    if monthsLayout ?? .vertical == .vertical { 
-      label.isHidden = false
-    }
-    else if monthsLayout == .horizontal { 
-      label.isHidden = true
-    }
+    // if monthsLayout ?? .vertical == .vertical { 
+    //   label.isHidden = false
+    // }
+    // else if monthsLayout == .horizontal { 
+    //   label.isHidden = true
+    // }
 
     isUserInteractionEnabled = false
 
@@ -75,6 +72,7 @@ public final class MonthHeaderView: UIView {
   fileprivate func setContent(_ content: Content) {
     label.text = content.monthText
     accessibilityLabel = content.accessibilityLabel
+    self.monthsLayout = content.monthsLayout
   }
 
   // MARK: Private
