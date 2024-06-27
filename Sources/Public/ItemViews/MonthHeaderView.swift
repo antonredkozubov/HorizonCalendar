@@ -30,21 +30,21 @@ public final class MonthHeaderView: UIView {
     label.textAlignment = invariantViewProperties.textAlignment
     label.textColor = invariantViewProperties.textColor
 
-    if monthsLayout == .horizontal { 
-      label.isHidden = true
-    }
-    else if monthsLayout == .vertical { 
-      label.isHidden = false
-    }
+    // if monthsLayout == .horizontal { 
+    //   label.isHidden = true
+    // }
+    // else if monthsLayout == .vertical { 
+    //   label.isHidden = false
+    // }
 
     super.init(frame: .zero)
 
-    // if monthsLayout ?? .vertical == .vertical { 
-    //   label.isHidden = false
-    // }
-    // else if monthsLayout == .horizontal { 
-    //   label.isHidden = true
-    // }
+    if monthsLayout == .vertical { 
+      label.isHidden = false
+    }
+    else if monthsLayout == .horizontal { 
+      label.isHidden = true
+    }
 
     isUserInteractionEnabled = false
 
