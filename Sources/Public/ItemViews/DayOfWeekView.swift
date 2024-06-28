@@ -27,11 +27,8 @@ public final class DayOfWeekView: UIView {
 
     backgroundLayer = CAShapeLayer()
     let backgroundShapeDrawingConfig = invariantViewProperties.backgroundShapeDrawingConfig
-    // backgroundLayer.backgroundColor = UIColor.clear.cgColor
     backgroundLayer.strokeColor = backgroundShapeDrawingConfig.borderColor.cgColor
     backgroundLayer.lineWidth = backgroundShapeDrawingConfig.borderWidth
-    // backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
-    // backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
     
     label = UILabel()
     label.font = invariantViewProperties.font
@@ -40,19 +37,8 @@ public final class DayOfWeekView: UIView {
     label.isAccessibilityElement = false
 
     super.init(frame: .zero)
-    // self.backgroundColor = UIColor.globalBackgroundColor
 
     isUserInteractionEnabled = false
-if monthsLayout ?? .horizontal == .horizontal { 
-      backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
-      backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
-      self.backgroundColor = UIColor.globalFirstLayerViewColor
-    }
-    else { 
-      backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
-      backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
-      self.backgroundColor = UIColor.globalBackgroundColor
-    }
     
     layer.addSublayer(backgroundLayer)
     addSubview(label)
@@ -103,6 +89,16 @@ if monthsLayout ?? .horizontal == .horizontal {
     label.text = content.dayOfWeekText
     monthsLayout = content.monthsLayout
     accessibilityLabel = content.accessibilityLabel
+    if monthsLayout == .horizontal { 
+      backgroundLayer.backgroundColor = UIColor.globalFirstLayerViewColor.cgColor
+      backgroundLayer.fillColor = UIColor.globalFirstLayerViewColor.cgColor
+      self.backgroundColor = UIColor.globalFirstLayerViewColor
+    }
+    else { 
+      backgroundLayer.backgroundColor = UIColor.globalBackgroundColor.cgColor
+      backgroundLayer.fillColor = UIColor.globalBackgroundColor.cgColor
+      self.backgroundColor = UIColor.globalBackgroundColor
+    }
   }
 
   // MARK: Private
