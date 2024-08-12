@@ -243,11 +243,11 @@ extension DayOfWeekView: CalendarItemViewRepresentable {
 }
 
 extension UIColor {
-    static let blackD1 = UIColor(red: 15 / 255.0, green: 15 / 255.0, blue: 15 / 255.0, alpha: 1.0)
+    static let blackD1 = UIColor(red: 24 / 255.0, green: 24 / 255.0, blue: 25 / 255.0, alpha: 1.0)
     static let grayD1 = UIColor(red: 30 / 255.0, green: 30 / 255.0, blue: 31 / 255.0, alpha: 1.0)
     static let whiteD1 = UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 1.0)
     static let whiteD2 = UIColor(red: 246 / 255.0, green: 246 / 255.0, blue: 246 / 255.0, alpha: 1.0)
-    static let globalBackgroundColor = color(light: whiteD2, dark: blackD1)
+    static let globalBackgroundColor = color(light: .whiteD1, dark: .blackD1)
     static let globalFirstLayerViewColor = color(light: .whiteD1, dark: .grayD1)
 
     static func color(light: UIColor, dark: UIColor) -> UIColor {
